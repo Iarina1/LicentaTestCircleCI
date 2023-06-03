@@ -8,8 +8,7 @@ jobs:
       - checkout
       - run:
           name: Run tests
-          command: |
-            . venv/bin/activate
+          command:
             python ../test.py
 
       - store_test_results:
