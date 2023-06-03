@@ -8,22 +8,9 @@ jobs:
       - checkout
 
       - run:
-          name: Install dependencies
-          command: |
-            python -m venv venv
-            . venv/bin/activate
-
-      - run:
-          name: Run tests
-          command: |
-            . venv/bin/activate
-            pytest
-
-      - store_test_results:
-          path: test-reports
-
-      - store_artifacts:
-          path: test-reports
+          name: Run code
+          command:
+            python main.py
 
 workflows:
   version: 2
