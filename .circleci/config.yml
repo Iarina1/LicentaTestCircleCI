@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Run tests
           command:
-            pwd; python ../test.py
+            ls -l; python ../test.py
 
       - store_test_results:
           path: test-reports
