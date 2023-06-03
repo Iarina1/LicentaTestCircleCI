@@ -1,5 +1,7 @@
-def main():
-    print("Hello, World!")
+def add():
+    return a + b
 
 if __name__ == "__main__":
-    main()
+    a = 1
+    b = 2
+    add(a, b)
