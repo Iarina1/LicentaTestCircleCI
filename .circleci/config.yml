@@ -6,11 +6,17 @@ jobs:
 
     steps:
       - checkout
-
       - run:
-          name: Run code
-          command:
-            python main.py
+          name: Run tests
+          command: |
+            . venv/bin/activate
+            python ../test.py
+
+      - store_test_results:
+          path: test-reports
+
+      - store_artifacts:
+          path: test-reports
 
 workflows:
   version: 2
