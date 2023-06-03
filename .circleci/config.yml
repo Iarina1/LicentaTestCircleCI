@@ -11,6 +11,9 @@ jobs:
           command: |
             python -m venv venv
             . venv/bin/activate
+       - run:
+          name: Create test-reports directory
+          command: mkdir -p test-reports
 
       - run:
           name: Run tests
